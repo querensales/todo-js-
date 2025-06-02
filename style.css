@@ -1,0 +1,121 @@
+:root {
+    --bg: #f8fafc;
+    --primary: #b5ead7;
+    --secondary: #ffdac1;
+    --accent: #c7ceea;
+    --text: #444;
+    --white: #fff;
+    --shadow: rgba(0,0,0,0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px var(--shadow);
+    padding: 2rem 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    margin: 2rem;
+}
+
+.title {
+    color: var(--text);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid var(--accent);
+    border-radius: 8px;
+    background: var(--secondary);
+    color: var(--text);
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-button {
+    background: var(--primary);
+    color: var(--text);
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.form-button:hover {
+    background: var(--accent);
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.task {
+    background: var(--secondary);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: background 0.2s;
+}
+
+.task:hover {
+    background: var(--accent);
+}
+
+.content {
+    color: var(--text);
+    font-size: 1.08rem;
+    word-break: break-word;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .app {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .form-input, .form-button {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.7rem;
+    }
+}
