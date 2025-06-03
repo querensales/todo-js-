@@ -22,11 +22,11 @@ Permite adicionar, concluir e deletar tarefas de forma interativa!
 
 ---
 
-## 📸 Preview
+<!-- ## 📸 Preview
 
 ![screenshot do app]
 ![alt text](image.png)
----
+--- -->
 
 ## 🚀 Como usar
 
