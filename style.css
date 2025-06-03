@@ -115,6 +115,20 @@ body {
   opacity: 0.6;
 }
 
+.delete-button {
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.delete-button:hover {
+  color: red;
+}
+
+
 
 .task:hover {
     background: var(--accent);
