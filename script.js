@@ -12,7 +12,6 @@ const criarTarefa = (evento) => {
     tarefa.appendChild(BotaoConcluir())
     tarefa.appendChild(BotaoDeletar())
     list.appendChild(tarefa)
-
     input.value = ""
 }
 
@@ -32,13 +31,16 @@ const concluirTarefa = (evento) => {
     const BotaoConcluir = evento.target
     const tarefaCompleta = BotaoConcluir.parentElement
     tarefaCompleta.classList.toggle('done')
+
+    if (tarefaCompleta.classList.contains('done')) {
+        BotaoConcluir.remove()
+    }
 }
 
 const BotaoDeletar = () => {
     const botao = document.createElement('button')
     botao.classList.add('delete-button')
 
-    // Aqui vai o ícone de lixeira do Font Awesome
     botao.innerHTML = '<i class="fas fa-trash-alt"></i>'
 
     botao.addEventListener('click', (evento) => {
@@ -49,4 +51,3 @@ const BotaoDeletar = () => {
 
     return botao
 }
-
